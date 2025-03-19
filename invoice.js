@@ -23,7 +23,7 @@ function calculateInvoice() {
 
 function cancelInvoice() {
     localStorage.removeItem('selectedProducts');
-    window.location.href = 'products.html';
+    window.location.href = 'index.html';
 }
 
 function exitPage() {
