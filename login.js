@@ -10,7 +10,7 @@ function validateLogin(event) {
     const storedPassword = localStorage.getItem(username);
     if (storedPassword && storedPassword === password) {
         localStorage.setItem("loggedInUser", username); // Store the logged-in user
-        window.location.href = "products.html"; // Redirect to products page
+        window.location.href = "index.html"; // Redirect to products page
     } else {
         loginAttempts++;
         message.textContent = `Invalid credentials. Attempts left: ${maxAttempts - loginAttempts}`;
