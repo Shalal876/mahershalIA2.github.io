@@ -1,0 +1,232 @@
+/* Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5FFFA;
+    color: #333;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+header {
+    background-color: #2E7D32;
+    color: white;
+    padding: 1em 20px; /* Increased side padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width */
+    min-height: 60px; /* Ensure enough height */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    object-fit: contain;
+    display: block;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.header-btn {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px; /* Increased padding for better visibility */
+    background-color: #4CAF50;
+    border-radius: 4px;
+    white-space: nowrap; /* Prevent text wrapping */
+    min-width: 80px; /* Ensure button is wide enough */
+}
+
+.header-btn:hover {
+    background-color: #45a049;
+}
+
+main {
+    padding: 1em; /* Reduced padding for better fit */
+    flex: 1 0 auto;
+    overflow-y: auto;
+    width: 100%;
+}
+
+footer {
+    background-color: #2E7D32;
+    color: white;
+    padding: 1em;
+    width: 100%;
+}
+
+/* Form Styling */
+form {
+    max-width: 300px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Unique Rule: Custom Shadow on Hover */
+button:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Product Grid Styling */
+#productGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for 6 items */
+    grid-template-rows: repeat(3, auto); /* 3 rows */
+    gap: 15px; /* Reduced gap for better fit */
+    max-width: 100%; /* Ensure grid fits within viewport */
+    margin: 0 auto;
+    padding: 10px; /* Reduced padding */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.product {
+    background: #E8F5E9;
+    padding: 10px; /* Reduced padding */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    border: none;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.product img {
+    width: 100%;
+    height: 120px; /* Reduced height for better fit */
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.product h3 {
+    margin: 5px 0; /* Reduced margin */
+    font-size: 1em; /* Reduced font size */
+}
+
+.product p {
+    margin: 5px 0;
+    font-size: 0.9em; /* Reduced font size */
+}
+
+/* Table Styling */
+#invoiceTable {
+    width: 90%; /* Adjusted for better fit */
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+#invoiceTable th, #invoiceTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#invoiceTable th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Media Queries */
+@media (min-width: 900px) {
+    #productGrid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+        max-width: 90%; /* Allow some breathing room */
+    }
+    .product img {
+        height: 150px; /* Restore height on larger screens */
+    }
+    .product h3 {
+        font-size: 1.2em; /* Restore font size on larger screens */
+    }
+    .product p {
+        font-size: 1em; /* Restore font size on larger screens */
+    }
+}
+
+@media (max-width: 600px) {
+    #productGrid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+    .header-icon {
+        width: 25px;
+        height: 25px;
+    }
+    .product img {
+        height: 100px; /* Further reduced for mobile */
+    }
+    form {
+        max-width: 90%;
+    }
+    header span {
+        font-size: 1.5em;
+    }
+    button {
+        width: 100%; /* Full width buttons on mobile */
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        flex-wrap: wrap; /* Allow wrapping on small screens */
+        justify-content: center;
+        gap: 10px;
+    }
+    .buttons {
+        flex-direction: row; /* Keep buttons in a row */
+        justify-content: center;
+        width: 100%; /* Ensure buttons take full width */
+    }
+    .header-btn {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}

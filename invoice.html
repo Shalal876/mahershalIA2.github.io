@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JaTools Invoice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/Jatools.png" alt="JaTools Icon" class="header-icon">
+            <span>JaTools Invoice</span>
+        </div>
+    </header>
+    <main>
+        <table id="invoiceTable">
+            <thead>
+                <tr><th>Product</th><th>Price</th><th>Subtotal</th></tr>
+            </thead>
+            <tbody id="invoiceBody"></tbody>
+            <tfoot>
+                <tr><td colspan="2">Tax (5%)</td><td id="tax"></td></tr>
+                <tr><td colspan="2">Discount (10%)</td><td id="discount"></td></tr>
+                <tr><td colspan="2">Total</td><td id="total"></td></tr>
+                <tr><td colspan="3">Date: <span id="date"></span></td></tr>
+            </tfoot>
+        </table>
+        <button onclick="cancelInvoice()">Cancel</button>
+        <button onclick="exitPage()">Exit</button>
+    </main>
+    <footer>
+        <p>© 2025 JaTools</p>
+    </footer>
+    <script src="invoice.js"></script>
+</body>
+</html>
